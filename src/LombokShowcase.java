@@ -1,8 +1,10 @@
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
 @AllArgsConstructor
+@ToString
 class LombokCar {
     private String color;
     private int year;
@@ -15,7 +17,7 @@ class LombokCar {
 public class LombokShowcase {
     public static void main(String[] args) {
         LombokCar car1 = new LombokCar("yellow", 2202, "GMC", "Bruno", 33, 24440);
-        LombokCar car2 = new LombokCar("green", 2022, "Vauxhall", "Zafira", 17772, 22200);
+        LombokCar car2 = new LombokCar("green", 2202, "Vauxhall", "Zafira", 17772, 22200);
         System.out.println(car1);
         System.out.println(car2);
         System.out.println(car1.getColor());
